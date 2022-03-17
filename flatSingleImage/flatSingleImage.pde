@@ -1,12 +1,15 @@
 //Global Variables
-float imageX, imageY, imageWidth, imageHeigth
+float imageX, imageY, imageWidth, imageHeigth;
 PImage pic;
 //
 size(600, 300);
 //Population
-imageX = DisplayWidth*0;
-imageY = DisplayHeight*0;
-imageWidth = DisplayWidth;
-imageHeigth = DisplayHeight;
-pic = load("obi-wan-star-jedi-23864621-800-600.jpg"); //Dimesions: width 800, height 600
+imageX = displayWidth*0;
+imageY = displayHeight*0;
+imageWidth = displayWidth;
+imageHeigth = displayHeight;
+pic = loadImage("flowers.jpg"); //Dimesions: width 600, height 300
 //
+//Rectangle Layout
+rect(imageX, imageY, imageWidth, imageHeigth);
+image(pic, imageX, imageY, imageWidth, imageHeigth);
