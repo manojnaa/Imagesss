@@ -13,8 +13,8 @@ size(1000, 800); //fullScreen; displayWidth, displayHeight
 pic = loadImage("Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimesions: width 800, height 600
 //Note: Dimensions are found in the image file / Right Click / Properties / Details
 //Find the larger dimenstion for aspect ratio
-int picWidth = 800; //Mine is 800, do not copy this!!!
-int picHeight = 600; //Mine is 600, do not copy this!!!
+int picWidth = 800; 
+int picHeight = 600; 
 if ( picWidth >= picHeight ) {
   largerDimension = picWidth;
   smallerDimension = picHeight;
