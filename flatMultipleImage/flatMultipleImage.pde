@@ -9,7 +9,7 @@ size(900,680);//fullScreen(); displayWidth, displayHeight
 //
 //Populating Variables
 pic1 = loadImage("Obi-wan-star-wars-jedi-23864621-800-600.jpg"); //Dimensions: 800 width, 600 height
-pic2 = loadImage("3-36954_vector-clip-art-png-transparent-png.png"); //Dimensions: 860 width, 613 height
+pic2 = loadImage("beautiful-hologram-water-color-frame-png_119551.jpg"); //Dimensions: 360 width, 360 height
 //
 rectXPic1 = width;
 rectYPic1 = height;
