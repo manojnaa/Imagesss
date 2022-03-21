@@ -16,16 +16,29 @@ int pic1Width = 800;
 int pic1Height = 600;
 int pic2Width = 360;
 int pic2Height = 360;
-int largerPic1Dimension, smallerPic1Dimension;
-Boolean widthPic1Larger
+int largerPic1Dimension, smallerPic1Dimension, largerPic2Dimension, smallerPic2Dimension;
+Boolean widthPic1Larger=false, heightPic1Larger=false, widthPic2Larger=false, heightPic2Larger=false;
 //
 if ( pic1Width >= pic1Height ) { //ID Larger Dimension: Landscape and Square
  largerPic1Dimension = pic1Width;
  smallerPic1Dimension = pic1Height;
  widthPic1Larger = true;
-} else {} //End pic1 larger dimension ID
+} else { //Id Larger Dimension; Portrait
+ largerPic1Dimension = pic1Height;
+ smallerPic1Dimension = pic1Width;
+ heightPic1Larger = true;
+} //End pic1 larger dimension ID
 //
-if () {} else {} //End pic2 larger dimension ID
+if ( pic1Width >= pic1Height ) { 
+ largerPic2Dimension = pic2Width;
+ smallerPic2Dimension = pic2Height;
+ widthPic2Larger = true;
+} else {
+ largerPic2Dimension = pic2Height;
+ smallerPic2Dimension = pic2Width;
+ heightpic2Larger = true;
+} //End pic2 larger dimension ID
+println (smallerPic1Dimension, largerPic1Dimension, smallerPic1Dimension, largerPic1Dimension); //Verifying Variable Details 
 //
 rectXPic1 = width*1/4;
 rectYPic1 = height*0;
