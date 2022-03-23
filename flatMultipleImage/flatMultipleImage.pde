@@ -50,13 +50,8 @@ if ( widthPic2Larger == true ) imageHeightRatioPic2 = float (smallerPic2Dimensio
 if ( heightPic2Larger == true ) imageWidthRatioPic2 = float (smallerPic2Dimension) / float (largerPic2Dimension);
 if ( heightPic2Larger == true ) imageHeightRatioPic2 = float (largerPic2Dimension) / float (largerPic2Dimension);
 println(imageWidthRatioPic1, imageHeightRatioPic1, imageWidthRatioPic2, imageHeightRatioPic2); //Verifying Variable Details (Ratios)
-float pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted;
-pic1WidthAdjusted = pic1Width * imageWidthRatioPic1;
-pic1HeightAdjusted = pic1Height * imageHeightRatioPic1;
-pic2WidthAdjusted = pic2Width * imageWidthRatioPic2;
-pic2HeightAdjusted = pic2Height * imageHeightRatioPic2;
 //
-// **CONTINUE HERE: use ratios to change the image width and height properties
+// Use ratios to change the image width and height properties of Rectangle
 // **See below to Specific Image Properties of Image and Rectangle Variables
 //
 rectXPic1 = width*1/4;
@@ -68,8 +63,22 @@ rectYPic2 = height*1/2;
 rectWidthPic2 = width*6/8;
 rectHeightPic2 = height*1/2;
 //
+// Final Aspect Ratio Calculations
+float pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted;
+pic1WidthAdjusted = rectWidthPic1 * imageWidthRatioPic1;
+pic1HeightAdjusted = rectHeightPic1 * imageHeightRatioPic1;
+pic2WidthAdjusted = rectWidthPic2 * imageWidthRatioPic2;
+pic2HeightAdjusted = rectHeightPic2 * imageHeightRatioPic2;
+println (pic1Width, pic1Height, pic2Width, pic2Height);
+println (pic1WidthAdjusted, pic1HeightAdjusted, pic2WidthAdjusted, pic2HeightAdjusted);
+//
+//
 //Rectangle Layout & Image Printing on Canvas
 rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
 rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation 
+// Image using Rect() Variables
 image(pic1, rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1);
 image(pic2, rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2);
+// Change the Rect() Variables to Aspect Ratio
+image(pic1, rectXPic1, rectYPic1, pic1WidthAdjusted, pic1HeightAdjusted);
+image(pic2, rectXPic2, rectYPic2, pic2WidthAdjusted, pic2HeightAdjusted);
