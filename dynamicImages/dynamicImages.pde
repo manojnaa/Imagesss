@@ -23,7 +23,7 @@ int pic1Width = 800;
 int pic1Height = 600;
 int pic2Width = 360;
 int pic2Height = 360;
-//
+  //
   //Choosing larger image dimension
   if ( pic1Width >= pic1Height ) { //ID Larger Dimension: Landscape and Square
     largerPic1Dimension = pic1Width;
@@ -82,7 +82,7 @@ int pic2Height = 360;
 void draw()
 { //Note: DRAW Loop repeats 60 times / second, static images should be in SETUP, "system resourses"
   //Rectangle Layout & Image Printing on Canvas
- fill(blue);
+ fill(red);
  //rect(rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1); //Image 1, landscape presentation
  rect(rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2); //Image 2, landscape presentation 
  // Image using Rect() Variables
